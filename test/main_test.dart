@@ -18,7 +18,7 @@ void main() {
       final findAsset = find.byWidgetPredicate(
         (widget) =>
             widget is SvgPicture &&
-            (widget.pictureProvider as ExactAssetPicture)
+            (widget.bytesLoader as SvgAssetLoader)
                     .assetName
                     .compareTo('assets/flutter.svg') ==
                 0,
